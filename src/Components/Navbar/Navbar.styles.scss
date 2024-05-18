@@ -1,0 +1,23 @@
+.announcement-bar-container{
+   background-color: #2c2e2f;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1%;
+   padding: 0.4rem 2rem;
+   color: white;
+}
+.user{
+   position: relative;
+   right: 20%;
+}
+.firstNav{
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   z-index: 1;
+} 
+.nav{
+   color: black;
+}
+.nav:hover{
+   color: rgb(17, 69, 238);
+}

@@ -1,0 +1,22 @@
+.container {
+     margin-left: 2%;
+  }
+  .search{
+    position: absolute;
+    margin-top: 10px;
+    left: 18px;
+  }
+  
+  .search-icon {
+    position: relative;
+  }
+  
+  input {
+    width: 60% ;/* Make the input cover the remaining width after considering the space for the search icon */
+    padding-left: 30px; /* Adjust the left padding to accommodate the search icon */
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    padding-left: 28px;
+    border: 2px solid #222;
+  }
+  

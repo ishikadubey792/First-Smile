@@ -1,0 +1,275 @@
+@import '../../styles/mixin.scss';
+
+.home1{
+    margin-top: 165px;
+     @include lg{
+        margin-top: 246px;
+     }
+    .mainbanner{
+        width: 100%;
+        height: auto;
+    }
+}
+Carousel{
+    margin-left: -10px;
+}
+.topdeals{
+    height: 300px;
+    width: 93%;
+    margin: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.electronic{
+    display: flex;
+}
+.topdeals h2{
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.details{
+    margin-top: 12px;
+}
+.details a{
+    text-decoration: none;
+    color: #007185;
+    font-size: 14px;
+}
+.details a:hover{
+    color: rgb(116, 19, 19);
+    text-decoration: underline;
+}
+.itmes{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.deals{
+    height: 245px;
+    width: 200px;
+    border-radius: 50%;
+    // margin-left: 100px;
+    gap: 100px;
+    // background-color: rgba(95, 196, 243, 0.5);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+}
+.deals p{
+    margin-top: 20px;
+    // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 5px 5px;
+}
+.deals img{
+    height: 180px;
+    width: 200px;
+    border-radius: 50%;
+}
+.benefits{
+    // height: 200px;
+    // width: 93%;
+    margin: 50px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.policy{
+    height: 90px;
+    width: 271px;
+    margin-left: 20px;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background-color: rgb(219 234 254);
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.policy p{
+    margin: 0;
+}
+.shipping{
+    color: rgb(190,24,93 );
+    font-weight:bold; 
+    height:50px; 
+    width:50px;
+}
+.bold{
+    font-weight: 600;
+    font-size: larger;
+}
+
+.topProducts{
+    height: auto;
+    width: 93%;
+    margin: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.topProducts h2{
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.product-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    .product{
+        position: relative;
+        height: 400px;
+        width: 260px;
+        margin-top: 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        margin-left: 40px;
+        &:hover{
+            img{
+                transform: scale(0.95);
+            }
+        }
+        .product-image {
+            text-align: center;
+            width: 100%;
+            height: 230px;
+            padding: 35px 20px;
+            // border-bottom: 1px solid gray;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                transition: all 0.5s;
+            }
+        }
+        .product-category{
+            color: rgb(173, 172, 172);
+            text-transform: uppercase;
+            font-size: small;
+        }
+        .product-details {
+            flex: 2;
+            padding: 20px;
+        }
+        .product-title {
+            font-size: 20px;
+            margin-top: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .product-discount{
+            position: absolute;
+            // height: 20px;
+            padding: 5px 15px;
+            // background-color: rgb(15, 75, 15);
+            color: rgb(15, 75, 15);
+            border-radius: 25px;
+            top: 10px;
+            right: 10px;
+            font-weight:600;
+
+        }
+        .product-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .topdeals {
+        height: auto;
+        width: auto;
+        // margin: 20px;
+    }
+    .electronic {
+        flex-direction: row;
+        // align-items: center;
+        // text-align: center;
+        justify-content: center;
+    }
+    .itmes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+    }
+    .deals {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .benefits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    // .policy {
+    //     margin: 20px;
+    // }
+}
+@media (min-width: 769px) and (max-width: 1260px) {
+    .topdeals {
+        height: auto;
+        width: auto;
+        // margin: 20px;
+    }
+    .electronic {
+        flex-direction: row;
+        // align-items: center;
+        // text-align: center;
+        justify-content: center;
+    }
+    .itmes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+    }
+    .deals{
+        margin-top: 20px;
+    }
+    .benefits{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 80px;
+        gap: 20px;
+    }
+    .policy{
+        height: 100px;
+        width: 350px;
+    }
+  }
+  @media (min-width: 344px) and (max-width: 740px) {
+    .home1{
+        margin-top: 270px;
+    }
+    .topdeals{
+        width: auto;
+    }
+    .policy{
+        height: 130px;
+        width: 280px;
+        margin-right: 20px;
+    }
+  }

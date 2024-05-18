@@ -1,0 +1,21 @@
+.range input{
+    width: 100%;
+}
+.filter-container {
+    height: 415px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.filter-section{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+label input{
+    margin-right: -30px;
+}
