@@ -4,7 +4,7 @@ import Footer from "../../Components/Footer/Footer";
 import banner from "../../assets/mainbanner.gif";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Home/home.styles.scss";
-import { Carousel, Image } from "react-bootstrap";
+import { Button, Carousel, Image } from "react-bootstrap";
 import slide1 from "../../assets/img5.avif";
 import slide2 from "../../assets/img6.avif";
 import slide3 from "../../assets/img7.avif";
@@ -19,6 +19,10 @@ import { RiRefund2Fill, RiDiscountPercentLine } from "react-icons/ri";
 import { AiFillCustomerService } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { productSelector } from "../../Redux/Reducer/productReducer";
+import addToCart from "../../assets/addToCart.png";
+import { GrCart } from "react-icons/gr";
+import { FaRegHeart } from "react-icons/fa";
+import { IoEyeOutline } from "react-icons/io5";
 
 const Home = () => {
   // const [userDetails , setUserDetails] = useState(null);
@@ -140,21 +144,31 @@ const Home = () => {
           </span>
         </div>
         <div className="product-container">
-          {
-            products.map((product) => (
-              <div className="product">
-                <div className="product-image">
-                  <img src={product.img} alt="Product Image" />
+          {products.slice(0, 9).map((product) => (
+            <div className="product" key={product.id}>
+              <div className="product-image">
+                <div className="choice">
+                  <div className="div">
+                  <GrCart style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
+                  </div>
+                 <div className="div">
+                 <FaRegHeart style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
+                 </div>
+                  <div className="div">
+                    <IoEyeOutline style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} />
+                  </div>
                 </div>
-                <div class="product-details">
-                  <h6 className="product-category">{product.category}</h6>
-                  <h4 className="product-title">{product.title}</h4>
-                  <p className="product-price">&#8377; {product.price}</p>
-                  <p className="product-discount">{product.discount}% Off</p>
-                </div>
+                <img src={product.img} alt="Product Image" />
               </div>
-            ))
-          }
+              <div className="product-details">
+                <h6 className="product-category">{product.category}</h6>
+                <h4 className="product-title">{product.title}</h4>
+                <p className="product-price">&#8377; {product.price}</p>
+                <p className="product-discount">{product.discount}% Off</p>
+              </div>
+              <Button className="product-cart"><img src={addToCart} alt="cart" width={20}/>Add To Bag</Button>
+            </div>
+          ))}
         </div>
       </div>
       <div>

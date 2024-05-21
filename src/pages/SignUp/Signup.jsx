@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink , useNavigate} from 'react-router-dom';
 import logo from "../../assets/logo.png";
 import { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updatePhoneNumber, updateProfile } from 'firebase/auth';
 import { auth , db } from '../../Config/firebaseInit';
 import { setDoc , doc } from 'firebase/firestore';
 import toast from 'react-hot-toast';
@@ -27,6 +27,7 @@ const handleRegister = async (e) => {
     await createUserWithEmailAndPassword(auth, email, password, contact);
     const user = auth.currentUser;
     console.log(user);
+    await updateProfile(auth.currentUser, {displayName: name})
     if(user){
       await setDoc(doc(db, "users", user.uid), {
          name: name,

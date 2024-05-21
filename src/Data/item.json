@@ -37,6 +37,60 @@
 	},
 	{
 		"id": "item-5",
+		"title": "Shining Diva",
+		"description": "Shining Diva Fashion Latest Stylish 18k Gold Plated Kundan Wedding Necklace Set for Women",
+		"img": "https://m.media-amazon.com/images/I/81LB1BW9WCL._AC_UL320_.jpg",
+		"price": 600,
+		"discount": 15,
+		"category": "jwellery"
+	},
+	{
+		"id": "item-6",
+		"title": "Atasi International",
+		"description": "Atasi International Silver Plated Alloy Necklace Set with Earrings For Women (RF5461)",
+		"img": "https://m.media-amazon.com/images/I/71mYHZzSPiL._AC_UL320_.jpg",
+		"price": 280,
+		"discount": 8,
+		"category": "jwellery"
+	},
+	{
+		"id": "item-7",
+		"title": "PEORA",
+		"description": "Peora Gold Plated Crystal Pearl Long Necklace with Drop Earrings Traditional Ethnic Jewellery Set for Women Girls",
+		"img": "https://m.media-amazon.com/images/I/51oXZdWg++L._AC_UL320_.jpg",
+		"price": 450,
+		"discount": 7,
+		"category": "jwellery"
+	},
+	{
+		"id": "item-8",
+		"title": "Shining Diva Fashion",
+		"description": "Shining Diva Fashion Latest Stylish Design Fancy Crystal Necklace Jewellery Set for Women (15221s)(Green)",
+		"img": "https://m.media-amazon.com/images/I/61HFppPxVML._AC_UL320_.jpg",
+		"price": 395,
+		"discount": 7,
+		"category": "jwellery"
+	},
+	{
+		"id": "item-9",
+		"title": "Giva",
+		"description": "GIVA 925 Silver Princess Earrings|Gift for Girlfriend,Pendant to Gift Women & Girls |With Certificate of Authenticity and 925 Stamp|6 Month Warranty",
+		"img": "https://m.media-amazon.com/images/I/610-2b7UFBL._SY575_.jpg",
+		"price": 1614,
+		"discount": 9,
+		"category": "jwellery"
+	},
+	{
+		"id": "item-10",
+		"title": "Giva",
+		"description": "GIVA 925 Silver Anushka Sharma Royal Blue Pendant with Link Chain |Gifts for Girlfriend, Gifts for Women & Girls| With Certificate of Authenticity and 925 Stamp | 6 Month Warranty*",
+		"img": "https://m.media-amazon.com/images/I/51vpPKizAYL._SY575_.jpg",
+		"price": 1614,
+		"discount": 9,
+		"category": "jwellery"
+	},
+	{
+		"id": "item-11",
 		"title": "Leather handbag",
 		"description": "Keywest Womens Vegan Leather Penguin Handbag (Large)",
 		"img": "https://m.media-amazon.com/images/I/71-OIJNcNkL._SY695_.jpg",
@@ -45,7 +99,7 @@
 		"category": "bags"
 	},
 	{
-		"id": "item-6",
+		"id": "item-12",
 		"title": "Sling Bag",
 		"description": "EXOTIC Dualtone Women Sling Bag|Closuretype-Zipper|Polyurethane",
 		"img": "https://m.media-amazon.com/images/I/61zEeloXWIL._SY695_.jpg",
@@ -54,7 +108,7 @@
 		"category": "womens bags"
 	},
 	{
-		"id": "item-7",
+		"id": "item-13",
 		"title": "Girls Sling Bag",
 		"description": "EXOTIC Color block Sling Bag for Girls/Women|Product Dimensions (CM)-24 x 9 x 19| Fashion City shoulder bag ",
 		"img": "https://m.media-amazon.com/images/I/71IOY9cwGML._SY695_.jpg",
@@ -63,7 +117,43 @@
 		"category": "womens bags"
 	},
 	{
-		"id": "item-8",
+		"id": "item-14",
+		"title": "VEZELA",
+		"description": "VEZELA Handbags for Women-Combo Pack of 4-Shoulder Bag Crossbody Bag Sling Bag Card Holder-Set of 4 Purse for Women-Golden ",
+		"img": "https://m.media-amazon.com/images/I/81SrFOZV2vL._AC_UL320_.jpg",
+		"price": 1899,
+		"discount": 10,
+		"category": "womens bags"
+	},
+	{
+		"id": "item-15",
+		"title": "LaFille Women's Handbag",
+		"description": "LaFille Women's Handbag | Ladies Purse",
+		"img": "https://m.media-amazon.com/images/I/416kQdI9ocL._AC_UL320_.jpg",
+		"price": 1099,
+		"discount": 9,
+		"category": "womens bags"
+	},
+	{
+		"id": "item-16",
+		"title": "Diana Korr Mercia",
+		"description": "Diana Korr Mercia Classic Handbag for Women",
+		"img": "https://m.media-amazon.com/images/I/81eGj8bqxRL._AC_UL320_.jpg",
+		"price": 999,
+		"discount": 6,
+		"category": "womens bags"
+	},
+	{
+		"id": "item-17",
+		"title": "VOYAGER PARIS",
+		"description": "VOYAGER PARIS Sephora Handbag | Foldable Top Handle Bag | Vegan Leather | Has An Inner Zipper Pocket And One Open Pocket | Suitable For Office & Daily Use | Women's Shoulder Bag",
+		"img": "https://m.media-amazon.com/images/I/51yHxLNJ1WL._AC_UL320_.jpg",
+		"price": 1195,
+		"discount": 8,
+		"category": "womens bags"
+	},
+	{
+		"id": "item-18",
 		"title": "Bhagavad Gita",
 		"description": "Srimad Bhagavad Gita  (yes, Hindi, A C Bhaktivedanta Swami Prabhupada)| ALGAE ENTERPRISES.",
 		"img": "https://rukminim2.flixcart.com/image/832/832/jraycnk0/regionalbooks/j/q/p/shreemad-bhagwat-geeta-original-imafc9gfepuryhsq.jpeg?q=70&crop=false",
@@ -72,7 +162,7 @@
 		"category": "books"
 	},
 	{
-		"id": "item-9",
+		"id": "item-19",
 		"title": "The monk who sold his ferrari",
 		"description": "The Monk Who Sold His Ferrari Paperback – 25 September 2003",
 		"img": "https://m.media-amazon.com/images/I/411uFSVr9ZL._SY445_SX342_.jpg",
@@ -81,7 +171,7 @@
 		"category": "books"
 	},
 	{
-		"id": "item-10",
+		"id": "item-20",
 		"title": "Power of your subconscious mind ",
 		"description": "Power of Your Subconscious Mind - The Subconscious Code : Cracking the Secrets Within  (English, Paperback, Murphy Joseph)",
 		"img": "https://rukminim2.flixcart.com/image/832/832/ki214sw0-0/book/n/w/g/the-power-of-your-subconscious-mind-original-imafxxvxsgzgd7gq.jpeg?q=70&crop=false",
@@ -90,30 +180,75 @@
 		"category": "books"
 	},
 	{
-		"id": "item-11",
-		"title": "Apple iPhone 15",
-		"description": "Apple iPhone 15 (128 GB) - Black|48MP MAIN CAMERA WITH 2X TELEPHOTO|POWERHOUSE A16 BIONIC CHIP | NEXT-GENERATION PORTRAITS",
-		"img": "https://m.media-amazon.com/images/I/31KxpX7Xk7L._SY445_SX342_QL70_FMwebp_.jpg",
-		"price": 71499,
-		"discount": 5,
-		"category": "electronics"
+		"id": "item-21",
+		"title": "CASSIEY Fashion Slippers",
+		"description": "CASSIEY Fashion Slippers for Women Slipper Fancy Design Slip on Flats",
+		"img": "https://m.media-amazon.com/images/I/81E316bV5XL._AC_UL320_.jpg",
+		"price": 400,
+		"discount": 10,
+		"category": "Footwear"
 	},
 	{
-		"id": "item-12",
-		"title": "Samsung Galaxy M14 5G",
-		"description": "Samsung (Smoky Teal,6GB,128GB)|50MP Triple Cam|Segments Only 6000 mAh 5G SP|5nm Processor|2 Gen. OS Upgrade & 4 Year Security Update|12GB RAM with RAM Plus|Android 13|Without Charger",
-		"img": "https://m.media-amazon.com/images/I/818VqDSKpCL._SX679_.jpg",
-		"price": 10990,
+		"id": "item-22",
+		"title": "Liberty",
+		"description": "Liberty Womens LPMXT-801 Casual Clog",
+		"img": "https://m.media-amazon.com/images/I/71z265klPRL._AC_UL320_.jpg",
+		"price": 450,
 		"discount": 15,
-		"category": "electronics"
+		"category": "Footwear"
 	},
 	{
-		"id": "item-13",
-		"title": "OnePlus 12R ",
-		"description": "OnePlus 12R (Cool Blue, 8GB RAM, 128GB Storage) | Up to 16GB of LPDDR5X RAM with RAM-Vita - Dual Cryo-velocity VC Cooling System, TÜV SÜD 48-Month Fluency Rating A",
-		"img": "https://m.media-amazon.com/images/I/717JX3femML._SX679_.jpg",
-		"price": 39990,
-		"discount": 18,
-		"category": "electronics"
+		"id": "item-23",
+		"title": "Bata",
+		"description": "Bata Womens Xiomara Mule Slipper",
+		"img": "https://m.media-amazon.com/images/I/71YSL87viqL._AC_UL320_.jpg",
+		"price": 1088,
+		"discount": 15,
+		"category": "Footwear"
+	},
+	{
+		"id": "item-24",
+		"title": "Generic",
+		"description": "PRIYANSH Enterprises Premium Women Ethnic Embroidered Flats Footwear for Women | Stylish Slippers For Party and Formal Wear | Flat Embroidered Sandal",
+		"img": "https://m.media-amazon.com/images/I/51rbLQb6cFL._AC_UL320_.jpg",
+		"price": 350,
+		"discount": 10,
+		"category": "Footwear"
+	},
+	{
+		"id": "item-25",
+		"title": "Bata Women's Diamonte E Sandal",
+		"description": "Bata Women's Diamonte E Sandal",
+		"img": "https://m.media-amazon.com/images/I/81dShDdRNTL._AC_UL320_.jpg",
+		"price": 999,
+		"discount": 10,
+		"category": "Footwear"
+	},
+	{
+		"id": "item-26",
+		"title": "Doctor-Walk",
+		"description": "Doctor Walk Flip Flop for Women | Soft Comfortable | Breathable | Fashionable | Stylish | Trendy | Super soft | Lightweight | Anti-Slip Sole | Indoor & Outdoor | (DW-029)(Pink)",
+		"img": "https://m.media-amazon.com/images/I/61manQIO-1L._AC_UL320_.jpg",
+		"price": 300,
+		"discount": 5,
+		"category": "Footwear"
+	},
+	{
+		"id": "item-27",
+		"title": "Marc Loire",
+		"description": "Marc Loire Women's Pair of Embellished Fashion Flat Sandals",
+		"img": "https://m.media-amazon.com/images/I/61r6IeE0VmL._AC_UL320_.jpg",
+		"price": 999,
+		"discount": 10,
+		"category": "Footwear"
+	},
+	{
+		"id": "item-28",
+		"title": "Pampy Angel",
+		"description": "Pampy Angel Transparent Leafs Women's Flip Flops Slides Back Open Household Comfortable Slippers",
+		"img": "https://m.media-amazon.com/images/I/51N7q3G1naL._AC_UL320_.jpg",
+		"price": 999,
+		"discount": 8,
+		"category": "Footwear"
 	}
 ]

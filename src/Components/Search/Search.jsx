@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
 import '../Search/search.styles.scss'; // Import your CSS file
 import { IoSearchOutline } from "react-icons/io5";
+import { setFilteredProducts, setSearchQuery } from '../../Redux/Reducer/productReducer';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
   const [isFocused, setIsFocused] = useState(false);
+  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleFocus = () => {
+    navigate("/product");
     setIsFocused(true);
   };
 
   const handleBlur = () => {
     setIsFocused(false);
   };
+
+  const handleSearchQuery = (e) =>{
+     dispatch(setSearchQuery(e.target.value));
+     dispatch(setFilteredProducts()); 
+  }
 
   return (
     <div className="container">
@@ -23,6 +35,7 @@ const Search = () => {
         placeholder="Search..."
         onFocus={handleFocus}
         onBlur={handleBlur}
+        onChange={handleSearchQuery}
       />
     </div>
   );

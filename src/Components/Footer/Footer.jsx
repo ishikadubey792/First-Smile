@@ -60,10 +60,10 @@ const Footer = () => {
                 <a href='' className='text-reset'>Women</a> 
              </p>  
              <p>
-                <a href='' className='text-reset'>Kids</a> 
+                <a href='' className='text-reset'>Jewellery</a> 
              </p> 
              <p>
-                <a href='' className='text-reset'>Electronics</a> 
+                <a href='' className='text-reset'>Books</a> 
              </p>  
            </MDBCol>
            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4'>

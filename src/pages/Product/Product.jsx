@@ -1,31 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../Product/product.styles.scss";
 import Filter from '../../Components/Filter/Filter';
-import productImg from "../../assets/item8.avif";
 import { GrCart } from "react-icons/gr";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
+import { useDispatch, useSelector } from 'react-redux';
+import { productSelector, setFilteredProducts } from '../../Redux/Reducer/productReducer';
+import { Button } from 'react-bootstrap';
+import addToCart from "../../assets/addToCart.png";
 
 const Product = () => {
+  const {filteredProducts } = useSelector(productSelector);
+  const dispatch = useDispatch();
+
+   useEffect(()=>{
+      console.log(filteredProducts);
+      dispatch(setFilteredProducts());
+   },[dispatch]);
   return (
-   <div className='container'>
-    <div className='filter'>
-       <Filter/>   
-    </div>
-    <div className="product-card">
-      <img src={productImg} alt="img"  className="product-image" />
-      <div className="product-details">
-        <h2 className="product-name">product name</h2>
-        <p className="product-price">product price</p>
-        <div className='think'>
-           <GrCart />
-           <FaRegHeart />
-           <IoEyeOutline />
-        </div>
+    <div className='container'>
+      <div className='filter'>
+        <Filter />
+      </div>
+      <div className="product-container2">
+      {filteredProducts.map((product) => (
+            <div className="product2" key={product.id}>
+              <div className="product-image">
+              <div className="choice2">
+                  <div className="div2">
+                  <GrCart style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
+                  </div>
+                 <div className="div2">
+                 <FaRegHeart style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
+                 </div>
+                  <div className="div2">
+                    <IoEyeOutline style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} />
+                  </div>
+                </div>
+                <img src={product.img} alt="Product Image" />
+              </div>
+              <div className="product-details">
+                <h6 className="product-category">{product.category}</h6>
+                <h4 className="product-title">{product.title}</h4>
+                <p className="product-price">&#8377; {product.price}</p>
+                <p className="product-discount">{product.discount}% Off</p>
+              </div>
+              <Button className="product-cart2"><img src={addToCart} alt='cart' width={20}/> Add To Bag</Button>
+            </div>
+          ))}
       </div>
     </div>
-   </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

@@ -9,25 +9,25 @@ import Signup from "./pages/SignUp/Signup";
 import Navbar from "./Components/Navbar/Navbar";
 import { ToastContainer } from "react-bootstrap";
 import Favourite from "./pages/Favourite/Favourite";
+import ProtectedRoute from "./ProtectedRoutes";
 
 const App = () => {
   return (
    <>
     <Navbar/>
-    <Router>
       {/* header  */}
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/cart"  element= { <ProtectedRoute><Cart/></ProtectedRoute>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/product" element={<Product/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/contact" element={<ProtectedRoute><Contact/></ProtectedRoute>}/>
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/favourite" element={<Favourite/>}/>
+        <Route path="/favourite" element={ <ProtectedRoute><Favourite/></ProtectedRoute>}/>
       </Routes>
        <ToastContainer/>
-    </Router></>
+    </>
   )
 }
 

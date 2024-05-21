@@ -1,3 +1,4 @@
+@import "../../styles/mixin.scss";
 .announcement-bar-container{
    background-color: #2c2e2f;
    display: flex;
@@ -20,4 +21,29 @@
 }
 .nav:hover{
    color: rgb(17, 69, 238);
+}
+.hide{
+   transform: translateY(-100%);
+   opacity: 0;
+}
+.unHide{
+    transition: all;
+    transition-duration: 0.5s;
+}
+.wrapper{
+   display: flex;
+   align-items: center;
+   justify-content:space-evenly;
+   @include md2{
+      width: 100vw;
+      
+   }
+}
+.tools{
+   width: 200px;
+   @include md2{
+      width: 100%;
+      margin-right: 0;
+      margin-left: 20%;
+   }
 }

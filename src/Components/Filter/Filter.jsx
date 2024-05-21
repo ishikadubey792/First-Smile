@@ -1,22 +1,23 @@
 import React, { useState } from 'react'
 import "../Filter/filter.styles.scss";
+import { useDispatch, useSelector } from 'react-redux';
+import { productSelector, setFilteredProducts, setPriceFilter } from '../../Redux/Reducer/productReducer';
 
 const Filter = () => {
-    const [genderFilter , setGenderFilter] = useState([]);
-    const [categoryFilter , setCategoryFilter] = useState([]);
-    const [priceFilter,setPriceFilter] = useState(9000);
-    const [brandFilter , setBrandFilter] = useState([]);
+  const {priceFilter} = useSelector(productSelector);
+  const dispatch = useDispatch();
 
-    function handlePriceFilter(e){
-        setPriceFilter(Number(e.target.value));
-   }
-
+  const handlePriceFilter = (e) =>{
+      const priceValue = Number(e.target.value);
+      dispatch(setPriceFilter(priceValue));
+      dispatch(setFilteredProducts());
+  }
   return (
     <div className='filter-container'>
         <h4>Refine By</h4>
         <div className="range">
             <p>Price :  {priceFilter} </p>
-            <input onChange={handlePriceFilter} value={priceFilter} type="range" min="1" max="9000" step={20}/>
+            <input onChange={handlePriceFilter} value={priceFilter} type="range" min="1" max="2000" step={10}/>
           </div>
         <div className='filter-section'>
             <h5>Gender</h5>
