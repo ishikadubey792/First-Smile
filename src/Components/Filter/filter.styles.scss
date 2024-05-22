@@ -1,21 +1,34 @@
-.range input{
-    width: 100%;
-}
+
 .filter-container {
-    height: 415px;
+    height: 390px;
     width: 200px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 30px 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.filter-section{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-label input{
-    margin-right: -30px;
+    padding: 40px 30px;
+    h4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .range{
+        margin-top: 15px;
+        p{
+            line-height: 10px;
+            font-weight: 600;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    .filter-section{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        label input{
+            margin-left: -35px;
+            margin-right: -25px;
+        }
+    }
 }

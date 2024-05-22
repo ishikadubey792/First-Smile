@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import "../Filter/filter.styles.scss";
 import { useDispatch, useSelector } from 'react-redux';
-import { productSelector, setFilteredProducts, setPriceFilter } from '../../Redux/Reducer/productReducer';
+import { productSelector, setFilteredProducts, setPriceFilter, setSelectedcategory } from '../../Redux/Reducer/productReducer';
+import { FcFilledFilter } from "react-icons/fc";
 
 const Filter = () => {
-  const {priceFilter} = useSelector(productSelector);
+  const {priceFilter , selectedCategory} = useSelector(productSelector);
   const dispatch = useDispatch();
 
   const handlePriceFilter = (e) =>{
@@ -12,73 +13,61 @@ const Filter = () => {
       dispatch(setPriceFilter(priceValue));
       dispatch(setFilteredProducts());
   }
+  const handleCategoryFunction = (e) => {
+     const category = e.target.value;
+     const updatedCategory = selectedCategory.includes(category) ? selectedCategory.filter((c)=> c!== category) : [...selectedCategory, category];
+     dispatch(setSelectedcategory(updatedCategory));
+     dispatch(setFilteredProducts());
+  }
+
   return (
     <div className='filter-container'>
-        <h4>Refine By</h4>
+        <h4> <FcFilledFilter size={30}/> Refine By</h4>
         <div className="range">
             <p>Price :  {priceFilter} </p>
             <input onChange={handlePriceFilter} value={priceFilter} type="range" min="1" max="2000" step={10}/>
           </div>
         <div className='filter-section'>
-            <h5>Gender</h5>
-            <label>
-                <input 
-                  type="checkbox"
-                  value="boys"
-                />
-                Boys 
-            </label>
-            <label>
-                <input 
-                  type="checkbox"
-                  value="girls"
-                />
-                Girls 
-            </label>
-            <label>
-                <input 
-                  type="checkbox"
-                  value="men"
-                />
-                Men 
-            </label>
-            <label>
-                <input 
-                  type="checkbox"
-                  value="women"
-                />
-                Women 
-            </label>   
-        </div>  
-        <div className='filter-section'>
             <h5>Category</h5>
             <label>
                <input 
                    type='checkbox'
-                   value='t-shirt'
+                   value='mens cloths'
+                   onChange={handleCategoryFunction}
                />    
-               T-shirts
+               men's cloths
             </label> 
             <label>
                <input 
                    type='checkbox'
-                   value='shirts'
+                   value="women's cloths"
+                   onChange={handleCategoryFunction}
                />    
-                 Shirts
+               Women's cloths
+            </label> 
+            <label>
+               <input 
+                   type='checkbox'
+                   value='Jwellery'
+                   onChange={handleCategoryFunction}
+               />    
+                 Jwellery
             </label>  
             <label>
                <input 
                    type='checkbox'
-                   value='sweater & seatshirts'
+                   value= "womens bags"
+                   onChange={handleCategoryFunction}
                />    
-                  Sweatshirts
+                  women's bags
             </label>  
             <label>
                <input 
                    type='checkbox'
-                   value='Dresses'
+                   value='Footwear'
+                   onChange={handleCategoryFunction}
                />    
-                 Dresses
+                 Footwear
             </label> 
         </div>    
     </div>
