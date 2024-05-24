@@ -25,7 +25,7 @@ const Filter = () => {
         <h4> <FcFilledFilter size={30}/> Refine By</h4>
         <div className="range">
             <p>Price :  {priceFilter} </p>
-            <input onChange={handlePriceFilter} value={priceFilter} type="range" min="1" max="2000" step={10}/>
+            <input className='slider' onChange={handlePriceFilter} value={priceFilter} type="range" min="0" max="3000" step={10}/>
           </div>
         <div className='filter-section'>
             <h5>Category</h5>

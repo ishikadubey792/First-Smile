@@ -20,6 +20,27 @@
         }
         input{
             width: 100%;
+            -webkit-appearance: none;
+            border: 0;
+            &::-webkit-slider-runnable-track{
+                background-color: #FF69B4;
+                height: 2px;
+                cursor: pointer;
+                width: 100%;
+                border-radius: 4px;
+            }
+            &::focus{
+                outline: 0;
+            }
+            &::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border: 1px solid #FF69B4;
+                border-radius: 50%;
+                margin-top: -4px;
+            }
         }
     }
     .filter-section{
@@ -29,6 +50,7 @@
         label input{
             margin-left: -35px;
             margin-right: -25px;
+            accent-color: #FF69B4;
         }
     }
 }

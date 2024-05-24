@@ -96,7 +96,7 @@
 		"img": "https://m.media-amazon.com/images/I/71-OIJNcNkL._SY695_.jpg",
 		"price": 695,
 		"discount": 5,
-		"category": "bags"
+		"category": "womens bags"
 	},
 	{
 		"id": "item-12",
@@ -250,5 +250,23 @@
 		"price": 999,
 		"discount": 8,
 		"category": "Footwear"
+	},
+	{
+		"id": "item-29",
+		"title": "Wedani Suit",
+		"description": "Women Floral Print Anarkali Kurta with Pant and Dupatta",
+		"img": "https://m.media-amazon.com/images/I/612JvadSUzL._SY741_.jpg",
+		"price": 769,
+		"discount": 20,
+		"category": "Women's Cloths"
+	},
+	{
+		"id": "item-30",
+		"title": "Funday Fashion",
+		"description": "FUNDAY FASHION Women Regular Fit Solid Casual Shirt",
+		"img": "https://m.media-amazon.com/images/I/61bQ98yeWmL._SY741_.jpg",
+		"price": 359,
+		"discount": 25,
+		"category": "Women's Cloths"
 	}
 ]

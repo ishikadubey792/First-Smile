@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import "../Product/product.styles.scss";
 import Filter from '../../Components/Filter/Filter';
 import { GrCart } from "react-icons/gr";
@@ -8,13 +8,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { productSelector, setFilteredProducts } from '../../Redux/Reducer/productReducer';
 import { Button } from 'react-bootstrap';
 import addToCart from "../../assets/addToCart.png";
+import { addToCarts } from '../../Redux/Reducer/cartReducer';
+import { useAuthContext } from '../../Config/authProvider';
 
 const Product = () => {
   const {filteredProducts } = useSelector(productSelector);
   const dispatch = useDispatch();
+  const user = useAuthContext()
 
    useEffect(()=>{
-      console.log(filteredProducts);
+      // console.log(filteredProducts);
       dispatch(setFilteredProducts());
    },[dispatch]);
   return (
@@ -27,7 +30,7 @@ const Product = () => {
             <div className="product2" key={product.id}>
               <div className="product-image">
               <div className="choice2">
-                  <div className="div2">
+                  <div className="div2" onClick={()=>dispatch(addToCarts({uid: user.uid , item:product}))}>
                   <GrCart style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
                   </div>
                  <div className="div2">

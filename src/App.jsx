@@ -7,9 +7,9 @@ import Contact from "./pages/Contact/Contact";
 import Signin from "./pages/SignIn/Signin";
 import Signup from "./pages/SignUp/Signup";
 import Navbar from "./Components/Navbar/Navbar";
-import { ToastContainer } from "react-bootstrap";
 import Favourite from "./pages/Favourite/Favourite";
 import ProtectedRoute from "./ProtectedRoutes";
+import Shipping from "./pages/Shipping/Shipping";
 
 const App = () => {
   return (
@@ -25,8 +25,8 @@ const App = () => {
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/favourite" element={ <ProtectedRoute><Favourite/></ProtectedRoute>}/>
+        <Route path="/order" element={<ProtectedRoute><Shipping/></ProtectedRoute>}/>
       </Routes>
-       <ToastContainer/>
     </>
   )
 }

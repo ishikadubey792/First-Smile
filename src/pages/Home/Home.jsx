@@ -13,7 +13,6 @@ import jewellery from "../../assets/item2.jpg";
 import watches from "../../assets/item3.jpg";
 import heels from "../../assets/item4.webp";
 import bags from "../../assets/item8.avif";
-import productImg from "../../assets/item1.jpg";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { RiRefund2Fill, RiDiscountPercentLine } from "react-icons/ri";
 import { AiFillCustomerService } from "react-icons/ai";
