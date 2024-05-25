@@ -1,0 +1,115 @@
+.order-container {
+  margin-top: 15%;
+  padding: 2.5rem;
+  width: 100%;
+  .empty-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+
+    .empty-icon {
+      font-size: 9rem;
+      color: #737373;
+      transform: rotate(180deg);
+
+      .flipped-icon {
+        transform: scaleY(-1);
+        color: #47a8ce;
+      }
+    }
+    .empty-text {
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+
+    .shop-now {
+      margin-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.125rem;
+      padding: 0.75rem 1.25rem;
+      background: #000;
+      color: #fff;
+      border-radius: 0.375rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #47a8ce;
+      }
+    }
+  }
+
+  .order-list {
+    max-width: 100%;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    .order-title {
+      color: #47a8ce;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+
+      order-icon {
+        transform: scaleX(-1);
+        font-size: 1.5rem;
+      }
+    }
+    .order-card {
+      width: 100%;
+      background: #e2f2f8;
+      padding: 1.5rem;
+      border-left: 0.75rem dotted #fff;
+      border-right: 0.75rem dotted #fff;
+
+      .order-date {
+        text-align: center;
+        font-weight: 600;
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.5rem;
+      }
+      .order-table {
+        width: 100%;
+        border-collapse: collapse;
+        th,
+        td {
+          padding: 0.5rem;
+          border: 1px solid #000;
+        }
+        th {
+          border-right: 2px solid #000;
+        }
+
+        tfoot {
+          tr {
+            border-top: 2px solid #000;
+
+            &:first-child {
+              border-bottom: 2px solid #000;
+            }
+            .thank-you-text {
+              font-size: 1.5rem;
+              text-align: center;
+            }
+            .visit-link {
+              color: #1e90ff;
+              text-decoration: underline;
+            }
+
+            .sold-image {
+              width: 7rem;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

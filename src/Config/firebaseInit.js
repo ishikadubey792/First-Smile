@@ -14,7 +14,15 @@ const firebaseConfig = {
   messagingSenderId: "313478537053",
   appId: "1:313478537053:web:675abfd5279390003e92b4"
 };
-
+export const getADocsFromFirestore = async (collectionName, reference) => {
+  const docSnap = await getDoc(doc(firestoreDB, collectionName, reference));
+  if (docSnap.exists()) {
+    return docSnap.data();
+  } else {
+    // return "Document doesn't exist!";
+    return null;
+  }
+};
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

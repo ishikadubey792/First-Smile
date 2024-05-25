@@ -10,22 +10,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { cartSelector, decreaseItemCart, deletecart, getCart, increaseItemCart } from "../../Redux/Reducer/cartReducer";
 import { useAuthContext } from "../../Config/authProvider";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
+import { checkoutOrders } from "../../Redux/Reducer/shippingReducer";
 
 const Cart = () => {
   const { cart , total} = useSelector(cartSelector);
   const dispatch = useDispatch();
   const user = useAuthContext(); 
   const navigate = useNavigate();
-
-  const checkout = () =>{
-      navigate('/order');
-  }
-
+  
   // increase quantity
   useEffect(()=>{
-    dispatch(getCart({uid: user.uid}));
+    dispatch(getCart(user.uid));
   },[dispatch , user]);
 
+  const checkout = ()=>{
+    dispatch(checkoutOrders(user.uid));
+    navigate('/order');
+  }
   return (
     <div className="cart-container">
     {cart.length === 0 && (
@@ -87,10 +89,11 @@ const Cart = () => {
         {cart.length > 0 && (
              <div className="checkout">
              <h3 className="total-price">Total Price: &#8377; {total} </h3>
-             <button onClick={checkout} className="btn-checkout">Checkout</button>
+             <button onClick={checkout}  className="btn-checkout">Checkout</button>
            </div>
         )}
       </div>
+       <Footer/>
     </div>
   );
 };

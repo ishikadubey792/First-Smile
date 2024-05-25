@@ -10,6 +10,7 @@ import { Button } from 'react-bootstrap';
 import addToCart from "../../assets/addToCart.png";
 import { addToCarts } from '../../Redux/Reducer/cartReducer';
 import { useAuthContext } from '../../Config/authProvider';
+import Footer from '../../Components/Footer/Footer';
 
 const Product = () => {
   const {filteredProducts } = useSelector(productSelector);
@@ -48,7 +49,7 @@ const Product = () => {
                 <p className="product-price">&#8377; {product.price}</p>
                 <p className="product-discount">{product.discount}% Off</p>
               </div>
-              <Button className="product-cart2"><img src={addToCart} alt='cart' width={20}/> Add To Bag</Button>
+              <Button onClick={()=>dispatch(addToCarts({uid: user.uid , item:product}))} className="product-cart2"><img src={addToCart} alt='cart' width={20}/> Add To Bag</Button>
             </div>
           ))}
       </div>

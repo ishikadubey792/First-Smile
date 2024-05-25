@@ -34,20 +34,20 @@ export const  addToCarts = createAsyncThunk("carts/addToCarts", async(data , thu
         }else{
           const newItem = {...item , qty: 1}
           const updatedCart = [...userCart , newItem];
-          console.log(userCart ,updatedCart);
           thunkAPI.dispatch(updateToCart({uid: uid , updatedCart}));
           thunkAPI.dispatch(setTotal());
           toast.success("1x item added");
         }
+    }else{
+        toast.error("user is not logged in");
     }
 })
 
 // this function is work for gettin all the carts from database 
- export const getCart = createAsyncThunk("carts/getCart", async(data, thunkAPI)=>{
-     const docSnap = await getDoc(doc( db, 'carts' , data.uid));
+ export const getCart = createAsyncThunk("carts/getCart", async(uid, thunkAPI)=>{
+     const docSnap = await getDoc(doc( db, 'carts' , uid));
      if(docSnap.exists()){
         const docData = docSnap.data();
-        console.log(docData.cart);
         thunkAPI.dispatch(setToCart(docData.cart));
         thunkAPI.dispatch(setTotal());
      }
@@ -60,7 +60,7 @@ export const updateToCart = createAsyncThunk("carts/UpdateToCart", async(data, t
            cart: updatedCart,
            updateTime: new Date().toLocaleDateString(),
       })
-      thunkAPI.dispatch(getCart({uid: uid}));
+      thunkAPI.dispatch(getCart(uid));
 })
 export const increaseItemCart = createAsyncThunk("carts//increaseItemCart", async(data, thunkAPI)=>{
      const {uid , item} = data; 
@@ -105,5 +105,5 @@ export const deletecart = createAsyncThunk("carts/deleteCart" , async(data, thun
 })
 
 export const cartReducer = cartSlice.reducer;
-export const {setToCart, newItemToCart, increase, decrease, removeFromCart,setTotal} = cartSlice.actions;
+export const {setToCart,setTotal} = cartSlice.actions;
 export const cartSelector = (state) => state.cartReducer;

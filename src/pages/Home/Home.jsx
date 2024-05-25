@@ -16,12 +16,14 @@ import bags from "../../assets/item8.avif";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { RiRefund2Fill, RiDiscountPercentLine } from "react-icons/ri";
 import { AiFillCustomerService } from "react-icons/ai";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { productSelector } from "../../Redux/Reducer/productReducer";
 import addToCart from "../../assets/addToCart.png";
 import { GrCart } from "react-icons/gr";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
+import { useAuthContext } from "../../Config/authProvider";
+import { addToCarts } from "../../Redux/Reducer/cartReducer";
 
 const Home = () => {
   // const [userDetails , setUserDetails] = useState(null);
@@ -41,6 +43,8 @@ const Home = () => {
   // }
 
   const { products } = useSelector(productSelector);
+  const user = useAuthContext();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -147,7 +151,7 @@ const Home = () => {
             <div className="product" key={product.id}>
               <div className="product-image">
                 <div className="choice">
-                  <div className="div">
+                  <div onClick={()=>dispatch(addToCarts({uid: user.uid , item:product}))} className="div">
                   <GrCart style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
                   </div>
                  <div className="div">
@@ -165,7 +169,7 @@ const Home = () => {
                 <p className="product-price">&#8377; {product.price}</p>
                 <p className="product-discount">{product.discount}% Off</p>
               </div>
-              <Button className="product-cart"><img src={addToCart} alt="cart" width={20}/>Add To Bag</Button>
+              <Button onClick={()=>dispatch(addToCarts({uid: user.uid , item:product}))} className="product-cart"><img src={addToCart} alt="cart" width={20}/>Add To Bag</Button>
             </div>
           ))}
         </div>

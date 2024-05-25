@@ -101,7 +101,7 @@ const Navbar = () => {
                 </MDBNavbarLink>
               </div>
               <div>
-                <MDBNavbarLink href="#">
+                <MDBNavbarLink href="/order">
                   <MdLocalShipping />
                 </MDBNavbarLink>
               </div>
