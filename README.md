@@ -1,4 +1,4 @@
-<h1 align="center" style="font-size: 36px;"><img src="https://github.com/Abhithakur7080/shopie/assets/119639453/c7f37282-16b7-40f6-9cef-3132146fc458" width=30/> First Smile</h1>
+<h1 align="center" style="font-size: 36px;"><img src="https://github.com/ishikadubey792/First-Smile/assets/128132667/3a33d1e9-5f33-4aab-98f6-4db8c67caf4b" width=30/> FIRST SMILE</h1>  
 
 # Welcome to First Smile!
 
@@ -25,26 +25,23 @@ This project is built using React.js, Redux-Toolkit, Context API, Firebase, and 
 - MDB library
 
 ## Screenshots
-#### Homepage-1
-![Homepage-1](https://github.com/Abhithakur7080/shopie/assets/119639453/58d731ef-b8ba-4cbc-8f76-c331040dc928)
-#### Homepage-2
-![Homepage-2](https://github.com/Abhithakur7080/shopie/assets/119639453/89eb4b94-02e4-4d3e-9d73-0d95ebc76dfd)
-#### Search Query
-![Search Query](https://github.com/Abhithakur7080/shopie/assets/119639453/01713fae-fd6c-4216-ad8f-3f243ba8a74d)
+#### Homepage
+![home](https://github.com/ishikadubey792/First-Smile/assets/128132667/149148ef-4e2f-4045-bf8b-33fcdede5e06)
+
+#### Product  
+![product](https://github.com/ishikadubey792/First-Smile/assets/128132667/6732f7b2-d978-4696-bb7d-464e748f7170)
+
 #### Login
-![Login](https://github.com/Abhithakur7080/shopie/assets/119639453/5ccf62eb-0b80-46db-8743-a1a5e16c2962)
-#### Login error
-![Login error](https://github.com/Abhithakur7080/shopie/assets/119639453/ad11b435-9a7b-44b1-93b0-b74c94fe8c06)
+  ![login](https://github.com/ishikadubey792/First-Smile/assets/128132667/740f03a5-e698-4126-ba45-ecb93b643633)
+  
 #### Signup
-![Signup](https://github.com/Abhithakur7080/shopie/assets/119639453/dd378f85-a9c8-4e33-8314-f7801e766f9a)
-#### Signup error
-![Signup error](https://github.com/Abhithakur7080/shopie/assets/119639453/081bf9ba-b811-4418-b95f-b0e19c83f647)
-#### Login with Google
-![Login with Google](https://github.com/Abhithakur7080/shopie/assets/119639453/985772a0-0b78-4f4d-a1ac-bc271c842c79)
+   ![register](https://github.com/ishikadubey792/First-Smile/assets/128132667/7d59ff9f-3b9b-4cf0-9846-32038e56835e)
+
 #### Cart page
-![Cart page](https://github.com/Abhithakur7080/shopie/assets/119639453/8d751f4a-5487-4159-aec4-5732327ea0ae)
+  ![cart](https://github.com/ishikadubey792/First-Smile/assets/128132667/93e4af89-22b6-4c8c-aea6-03bcabff447d)
+
 #### Order page
-![Order page](https://github.com/Abhithakur7080/shopie/assets/119639453/ae60553d-6daf-4bb1-8c68-baab57d2f49b)
+![checkout](https://github.com/ishikadubey792/First-Smile/assets/128132667/d8e126c3-a89d-448a-85dc-343d7a9217e4)
 
 ## Installation
 To run this project locally, follow these steps:
