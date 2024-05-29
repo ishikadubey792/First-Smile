@@ -20,7 +20,6 @@ const Shipping = () => {
     dispatch(fetchAllOrders(user.uid));
   }, [dispatch, user]);
 
-  console.log(orders);
 
   return (
     <div className="order-container">
@@ -69,11 +68,11 @@ const Shipping = () => {
                   </tr>
                   <tr>
                     <td colSpan={3} className="thank-you-text">
-                      Thank you for your purchasing. For more purchases,{" "}
+                      Thank you for your purchasing. For more purchases,
                       <Link to="/" className="visit-link">
                         visit
                       </Link>
-                      again.
+                       again.
                     </td>
                     <td>
                       <img src={sold} alt="sold" className="sold-image" />

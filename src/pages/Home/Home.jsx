@@ -24,27 +24,17 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { useAuthContext } from "../../Config/authProvider";
 import { addToCarts } from "../../Redux/Reducer/cartReducer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  // const [userDetails , setUserDetails] = useState(null);
-
-  // const fetchUserData = () =>{
-  //   auth.onAuthStateChanged(async (user) =>{
-  //       console.log(user);
-  //       const docRef = doc(db,"users" , user.uid);
-  //       const docSnap = await getDoc(docRef);
-  //       if(docSnap.exists()) {
-  //         setUserDetails(docSnap.data());
-  //         console.log(docSnap.data());
-  //       }else{
-  //         console.log("user is not logged in");
-  //       }
-  //   })
-  // }
-
   const { products } = useSelector(productSelector);
   const user = useAuthContext();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const viewPage = (product) => {
+    navigate('/view', { state: { product } });
+  };
 
   return (
     <>
@@ -157,7 +147,7 @@ const Home = () => {
                  <div className="div">
                  <FaRegHeart style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}/>
                  </div>
-                  <div className="div">
+                  <div onClick={() => viewPage(product)} className="div">
                     <IoEyeOutline style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} />
                   </div>
                 </div>

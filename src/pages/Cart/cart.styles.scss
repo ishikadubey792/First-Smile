@@ -1,7 +1,13 @@
 @import "../../styles/mixin.scss";
 
 .cart-container{
-    margin-top: 15%;
+    margin-top: 190px;
+    @include lg{
+      margin-top: 280px;
+   }
+   @media (min-width: 990px) and (max-width: 1025px){
+        margin-top: 220px;
+   }
     .cart-title{
       color: #47a8ce;
       text-transform: uppercase;

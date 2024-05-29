@@ -2,8 +2,8 @@
 
 .home1{
     margin-top: 165px;
-     @include lg{
-        margin-top: 246px;
+     @include md2{
+        margin-top: 212px;
      }
     .mainbanner{
         width: 100%;
@@ -45,22 +45,19 @@ Carousel{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    .deals{
+        height: 245px;
+        width: 250px;
+        border-radius: 50%;
+        gap: 100px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
 }
-.deals{
-    height: 245px;
-    width: 200px;
-    border-radius: 50%;
-    // margin-left: 100px;
-    gap: 100px;
-    // background-color: rgba(95, 196, 243, 0.5);
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    text-align: center;
-}
+
 .deals p{
     margin-top: 20px;
-    // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -70,10 +67,13 @@ Carousel{
     height: 180px;
     width: 200px;
     border-radius: 50%;
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
 }
+.deals:hover img {
+    transform: scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
 .benefits{
-    // height: 200px;
-    // width: 93%;
     margin: 50px;
     margin-left: 80px;
     display: flex;
@@ -290,9 +290,6 @@ Carousel{
         justify-content: center;
         gap: 20px;
     }
-    // .policy {
-    //     margin: 20px;
-    // }
 }
 @media (min-width: 769px) and (max-width: 1260px) {
     .topdeals {
@@ -327,9 +324,6 @@ Carousel{
     }
   }
   @media (min-width: 344px) and (max-width: 740px) {
-    .home1{
-        margin-top: 270px;
-    }
     .topdeals{
         width: auto;
     }

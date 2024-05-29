@@ -8,7 +8,6 @@ import {
 } from "mdb-react-ui-kit";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../../assets/logo.png";
-// import Button from "react-bootstrap/Button";
 import Search from "../Search/Search";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
@@ -23,7 +22,6 @@ import { useAuthContext } from "../../Config/authProvider";
 
 const Navbar = () => {
   const user = useAuthContext();
-  console.log(user);
   const logoutUser = async () => {
     try {
       await signOut(auth);
@@ -69,7 +67,7 @@ const Navbar = () => {
       {/* first navbar for logo , search and cart  */}
       <MDBNavbar className="firstNav" expand="lg" dark bgColor="white">
         <MDBContainer className="wrapper">
-          <MDBNavbarBrand href="#" style={{ color: "black", height: "45px" }}>
+          <MDBNavbarBrand href="#" style={{ color: "black", height: "45px" }} className="logo">
             <img
               src={logo}
               alt="logo"
@@ -77,7 +75,7 @@ const Navbar = () => {
             />
           </MDBNavbarBrand>
           <Search />
-          <div className="d-flex justify-content-between align-items-center gap-2 tools">
+          <div className="d-flex  align-items-center tools">
             <div
               className="d-flex user"
               style={{ gap: "6%", whiteSpace: "nowrap", marginTop: "8px" }}
@@ -91,7 +89,7 @@ const Navbar = () => {
             </div>
             <div className="d-flex mb-2" style={{ gap: "20%" }}>
               <div>
-                <MDBNavbarLink href="/favourite">
+                <MDBNavbarLink href="/">
                   <FaRegHeart />
                 </MDBNavbarLink>
               </div>
@@ -141,11 +139,13 @@ const Navbar = () => {
               About
             </MDBNavbarLink>
           </div>
-          <div>
-            <MDBNavbarLink href="/contact" className="nav">
-              Contact Us
-            </MDBNavbarLink>
-          </div>
+          { !user && 
+            <div>
+              <MDBNavbarLink href="/signin" className="nav">
+                Log in
+              </MDBNavbarLink>
+           </div>
+          }
           <div onClick={logoutUser} style={{ marginLeft: "auto" }}>
             <IoIosLogOut style={{ cursor: "pointer" }} />
           </div>
