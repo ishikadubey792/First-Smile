@@ -13,7 +13,6 @@ import { Button } from "react-bootstrap";
 import addToCart from "../../assets/addToCart.png";
 import { addToCarts } from "../../Redux/Reducer/cartReducer";
 import { useAuthContext } from "../../Config/authProvider";
-import Footer from "../../Components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
 const Product = () => {
