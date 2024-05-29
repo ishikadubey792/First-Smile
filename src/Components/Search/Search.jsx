@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
   const [isFocused, setIsFocused] = useState(false);
-  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -31,7 +30,7 @@ const Search = () => {
         <IoSearchOutline className='search'/>
       </div>
       <input
-        type="text"
+        type="search"
         placeholder="Search..."
         onFocus={handleFocus}
         onBlur={handleBlur}

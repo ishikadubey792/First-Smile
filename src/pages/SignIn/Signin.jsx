@@ -17,6 +17,7 @@ import logo from "../../assets/logo.png";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Config/firebaseInit';
 import toast from 'react-hot-toast';
+import login from "../../assets/login.jpg";
 
 const Signin = () => {
   const [email , setEmail] = useState("");
@@ -42,7 +43,7 @@ const Signin = () => {
             <MDBRow className='g-0'>
     
               <MDBCol md='6'>
-                <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp' alt="login form" className='rounded-start w-100'/>
+                <MDBCardImage src={login} alt="login form" className='rounded-start w-100'/>
               </MDBCol>
     
               <MDBCol md='6'>

@@ -12,6 +12,7 @@ import { createUserWithEmailAndPassword, updatePhoneNumber, updateProfile } from
 import { auth , db } from '../../Config/firebaseInit';
 import { setDoc , doc } from 'firebase/firestore';
 import toast from 'react-hot-toast';
+import signUp from "../../assets/SignUp.jpg";
 
 
 const Signup = () => {
@@ -48,11 +49,11 @@ const handleRegister = async (e) => {
    }
 }
   return (
-    <MDBContainer className='my-5' style={{marginTop:"14%"}}>
+    <MDBContainer className='my-5 margintop' style={{marginTop: "14%"}}>
       <MDBCard>
          <MDBRow className='g-0'>
             <MDBCol md='6'>
-              <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp' alt="login form" className='rounded-start w-100'></MDBCardImage>
+              <MDBCardImage src={signUp} alt="login form" className='rounded-start w-100'></MDBCardImage>
             </MDBCol>
 
             <MDBCol md='6'>

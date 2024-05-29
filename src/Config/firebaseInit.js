@@ -7,19 +7,18 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA1K5lHK3A48TCT3Za8yTV7IN3Vv78O9mw",
-  authDomain: "first-smile-c2e7f.firebaseapp.com",
-  projectId: "first-smile-c2e7f",
-  storageBucket: "first-smile-c2e7f.appspot.com",
-  messagingSenderId: "313478537053",
-  appId: "1:313478537053:web:675abfd5279390003e92b4"
+  apiKey: import.meta.env.VITE_APP_API_KEY,
+  authDomain: import.meta.env.VITE_APP_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_APP_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_APP_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_APP_MESSAGE_SENDER_ID,
+  appId: import.meta.env.VITE_APP_APP_ID,
 };
 export const getADocsFromFirestore = async (collectionName, reference) => {
   const docSnap = await getDoc(doc(firestoreDB, collectionName, reference));
   if (docSnap.exists()) {
     return docSnap.data();
   } else {
-    // return "Document doesn't exist!";
     return null;
   }
 };
