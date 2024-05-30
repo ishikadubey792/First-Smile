@@ -5,7 +5,7 @@ import { MDBCard, MDBCardBody,
 from 'mdb-react-ui-kit'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavLink , useNavigate} from 'react-router-dom';
+import { Link, NavLink , useNavigate} from 'react-router-dom';
 import logo from "../../assets/logo.png";
 import { useState } from 'react';
 import { createUserWithEmailAndPassword, updatePhoneNumber, updateProfile } from 'firebase/auth';
@@ -73,8 +73,8 @@ const handleRegister = async (e) => {
                 <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Already have an account? <NavLink to="/signin" style={{color: '#393f81'}}>Sign in here</NavLink></p>
 
                 <div className='d-flex flex-row justify-content-start'>
-                    <a href="#!" className="small text-muted me-1">Terms of use.</a>
-                    <a href="#!" className="small text-muted">Privacy policy</a>
+                    <Link to="/signup" className="small text-muted me-1">Terms of use.</Link>
+                    <Link to="/signup" className="small text-muted">Privacy policy</Link>
                   </div>
     
               </MDBCardBody>

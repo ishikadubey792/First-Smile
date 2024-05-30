@@ -24,7 +24,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { useAuthContext } from "../../Config/authProvider";
 import { addToCarts } from "../../Redux/Reducer/cartReducer";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { products } = useSelector(productSelector);
@@ -43,33 +43,33 @@ const Home = () => {
       </div>
       <Carousel interval={2000} controls={false}>
         <Carousel.Item>
-          <a href="/product">
+          <Link to="/product">
             <Image className="img-fluid" src={slide1} alt="slide 1" />
-          </a>
+          </Link>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="/product">
+          <Link to="/product">
             {" "}
             <Image className="img-fluid" src={slide2} alt="slide 2" />
-          </a>
+          </Link>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="/product">
+          <Link to="/product">
             {" "}
             <Image className="img-fluid" src={slide3} alt="slide 3" />
-          </a>
+          </Link>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="/product">
+          <Link to="/product">
             <Image className="img-fluid" src={slide4} alt="slide 4" />
-          </a>
+          </Link>
         </Carousel.Item>
       </Carousel>
       <div className="topdeals">
         <div className="electronic">
           <h2>Top Deals</h2>
           <span className="details">
-            <a href="#">See more</a>
+            <Link to="/product">See more</Link>
           </span>
         </div>
         <div className="itmes">
@@ -133,7 +133,7 @@ const Home = () => {
         <div className="electronic">
           <h2>Top Products</h2>
           <span className="details">
-            <a href="#">See more</a>
+            <Link to="/product">See more</Link>
           </span>
         </div>
         <div className="product-container">

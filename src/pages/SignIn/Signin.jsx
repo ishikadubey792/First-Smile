@@ -12,7 +12,7 @@ import {
   }
   from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from "../../assets/logo.png";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Config/firebaseInit';
@@ -60,12 +60,12 @@ const Signin = () => {
                     <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg" value={password} onChange={(e)=> setPassword(e.target.value)}/>
                     <MDBBtn type='submit' className="mb-4 px-5" color='dark' size='lg'>Login</MDBBtn>
                   </form>
-                  <a className="small text-muted" href="#!">Forgot password?</a>
+                  <Link className="small text-muted" to="/signin">Forgot password?</Link>
                   <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <NavLink to="/signup" style={{color: '#393f81'}}>Register here</NavLink></p>
     
                   <div className='d-flex flex-row justify-content-start'>
-                    <a href="#!" className="small text-muted me-1">Terms of use.</a>
-                    <a href="#!" className="small text-muted">Privacy policy</a>
+                    <Link to="/signin" className="small text-muted me-1">Terms of use.</Link>
+                    <Link to="/signin" className="small text-muted">Privacy policy</Link>
                   </div>
     
                 </MDBCardBody>

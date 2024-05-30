@@ -18,7 +18,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../Config/firebaseInit";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../../Config/authProvider";
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const user = useAuthContext();
@@ -48,7 +48,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <navbar
+    <nav
       style={{
         position: "fixed",
         top: "0",
@@ -67,13 +67,17 @@ const Navbar = () => {
       {/* first navbar for logo , search and cart  */}
       <MDBNavbar className="firstNav" expand="lg" dark bgColor="white">
         <MDBContainer className="wrapper">
-          <MDBNavbarBrand href="#" style={{ color: "black", height: "45px" }} className="logo">
+          <Link
+            to="/"
+            style={{ color: "black", height: "45px" }}
+            className="logo"
+          >
             <img
               src={logo}
               alt="logo"
               style={{ width: "110%", height: "150%", marginTop: "-15px" }}
             />
-          </MDBNavbarBrand>
+          </Link>
           <Search />
           <div className="d-flex  align-items-center tools">
             <div
@@ -89,19 +93,19 @@ const Navbar = () => {
             </div>
             <div className="d-flex mb-2" style={{ gap: "20%" }}>
               <div>
-                <MDBNavbarLink href="/">
+                <Link to="/">
                   <FaRegHeart />
-                </MDBNavbarLink>
+                </Link>
               </div>
               <div>
-                <MDBNavbarLink href="/cart">
+                <Link to="/cart">
                   <FaShoppingCart />
-                </MDBNavbarLink>
+                </Link>
               </div>
               <div>
-                <MDBNavbarLink href="/order">
+                <Link to="/order">
                   <MdLocalShipping />
-                </MDBNavbarLink>
+                </Link>
               </div>
             </div>
           </div>
@@ -125,33 +129,35 @@ const Navbar = () => {
           style={{ display: "flex", gap: "3%", justifyContent: "flex-start" }}
         >
           <div>
-            <MDBNavbarLink href="/" className="nav">
+            <Link to="/" className="nav">
               Home
-            </MDBNavbarLink>
+            </Link>
           </div>
           <div>
-            <MDBNavbarLink href="/product" className="nav">
+            <Link to="/product" className="nav">
               Products
-            </MDBNavbarLink>
+            </Link>
           </div>
           <div>
-            <MDBNavbarLink href="/about" className="nav">
+            <Link to="/about" className="nav">
               About
-            </MDBNavbarLink>
+            </Link>
           </div>
-          { !user && 
+          {!user && (
             <div>
-              <MDBNavbarLink href="/signin" className="nav">
+              <Link to="/signin" className="nav">
                 Log in
-              </MDBNavbarLink>
-           </div>
-          }
-          <div onClick={logoutUser} style={{ marginLeft: "auto" }}>
-            <IoIosLogOut style={{ cursor: "pointer" }} />
-          </div>
+              </Link>
+            </div>
+          )}
+          {user && (
+            <div onClick={logoutUser} style={{ marginLeft: "auto" }}>
+              <IoIosLogOut style={{ cursor: "pointer" }} />
+            </div>
+          )}
         </MDBContainer>
       </MDBNavbar>
-    </navbar>
+    </nav>
   );
 };
 

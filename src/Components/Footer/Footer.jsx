@@ -6,6 +6,7 @@ import { FaFacebookF, FaTwitter , FaGoogle , FaInstagram , FaLinkedin , FaGithub
 import { IoMdHome } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import "../Footer/footer.styles.scss";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,24 +16,24 @@ const Footer = () => {
         <span> Get connected with us on social networks: </span>
       </div>
       <div>
-        <a href='' className='me-4 text-reset footer-link'>
+        <Link to='' className='me-4 text-reset footer-link'>
          <FaFacebookF />
-        </a>
-        <a href='' className='me-4 text-reset footer-link'>
+        </Link>
+        <Link to='' className='me-4 text-reset footer-link'>
           <FaTwitter />
-        </a>
-        <a href='' className='me-4 text-reset footer-link'>
+        </Link>
+        <Link to='' className='me-4 text-reset footer-link'>
           <FaGoogle/>
-        </a>
-        <a href='' className='me-4 text-reset footer-link'>
+        </Link>
+        <Link to='' className='me-4 text-reset footer-link'>
           <FaInstagram/>
-        </a>
-        <a href='' className='me-4 text-reset footer-link'>
+        </Link>
+        <Link to='' className='me-4 text-reset footer-link'>
           <FaLinkedin/>
-        </a>
-        <a href='' className='me-4 text-reset footer-link'>
+        </Link>
+        <Link to='' className='me-4 text-reset footer-link'>
           <FaGithub/>
-        </a>
+        </Link>
       </div>
     </section>
     <section>
@@ -54,31 +55,31 @@ const Footer = () => {
                 Products
             </h6>
              <p>
-                <a href='' className='text-reset'>Men</a> 
+                <Link to='/product' className='text-reset'>Men</Link> 
              </p>  
              <p>
-                <a href='' className='text-reset'>Women</a> 
+                <Link to='/product' className='text-reset'>Women</Link> 
              </p>  
              <p>
-                <a href='' className='text-reset'>Jewellery</a> 
+                <Link to='/product' className='text-reset'>Jewellery</Link> 
              </p> 
              <p>
-                <a href='' className='text-reset'>Books</a> 
+                <Link to='/product' className='text-reset'>Books</Link> 
              </p>  
            </MDBCol>
            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-4'>
             <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
             <p>
-                <a href='/about' className='text-reset'>About</a> 
+                <Link to='/about' className='text-reset'>About</Link> 
              </p>  
              <p>
-                <a href='' className='text-reset'>Terms and Condition</a> 
+                <Link to='/' className='text-reset'>Terms and Condition</Link> 
              </p>  
              <p>
-                <a href='' className='text-reset'>Offers</a> 
+                <Link to='/' className='text-reset'>Offers</Link> 
              </p> 
              <p>
-                <a href='' className='text-reset'>Help</a> 
+                <Link to='/' className='text-reset'>Help</Link> 
              </p>  
            </MDBCol>
            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>

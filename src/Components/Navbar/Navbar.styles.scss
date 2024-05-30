@@ -8,6 +8,9 @@
    padding: 0.4rem 2rem;
    color: white;
 }
+a{
+   color: #2c2e2f;
+}
 .user{
    position: relative;
    right: 20%;
@@ -15,6 +18,14 @@
 .firstNav{
    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    z-index: 1;
+   .wrapper{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80vw;
+      @include md2{
+         width: 100vw !important;
+      }
+   }
 } 
 .nav{
    color: black;

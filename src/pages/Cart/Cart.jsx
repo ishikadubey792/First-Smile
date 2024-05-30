@@ -9,7 +9,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { cartSelector, decreaseItemCart, deletecart, getCart, increaseItemCart } from "../../Redux/Reducer/cartReducer";
 import { useAuthContext } from "../../Config/authProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
 import { checkoutOrders } from "../../Redux/Reducer/shippingReducer";
 
@@ -36,12 +36,12 @@ const Cart = () => {
            <GiShoppingCart />
          </h1>
          <h2 className="text-lg font-normal">Your Cart is Empty.</h2>
-         <a
+         <Link
            className="mt-5 text-lg px-5 py-3 shop-btn"
-           href="/product"
+           to="/product"
          >
            Shop Now <FaArrowRight/>
-         </a>
+         </Link>
        </div>
     )} 
 
