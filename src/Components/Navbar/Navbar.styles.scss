@@ -53,9 +53,6 @@ a{
 .tools{
    width: 200px;
    @include md2{
-      // width: 100%;
-      // margin-right: 0;
-      // margin-left: 20%;
       order: -1;
    }
    @include sm{

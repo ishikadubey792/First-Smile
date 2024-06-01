@@ -1,13 +1,18 @@
 @import "../../styles//mixin.scss";
 .filter{
     margin-top: 180px;
+    position: relative;
 }
-.container{
+.cont{
     display: flex;
     gap: 10px;
+    @include md{
+        flex-direction: column;
+    }
 }
 .product-container2{
-  height: calc(100vh - 100px);
+  margin-left: 300px;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,10 +20,10 @@
   align-items: center;
   gap: 20px;
   margin-top: 200px;
-  overflow-y: scroll;
- @include md2{
-    margin-top: 280px;
-}
+  @include md{
+    margin-top: 10px;
+    margin-left: 0;
+  }
   &::-webkit-scrollbar{
     display: none;
   }

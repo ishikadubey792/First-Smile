@@ -3,6 +3,7 @@ import "../Filter/filter.styles.scss";
 import { useDispatch, useSelector } from 'react-redux';
 import { productSelector, setFilteredProducts, setPriceFilter, setSelectedcategory } from '../../Redux/Reducer/productReducer';
 import { FcFilledFilter } from "react-icons/fc";
+import { Dropdown } from 'react-bootstrap';
 
 const Filter = () => {
   const {priceFilter , selectedCategory} = useSelector(productSelector);
@@ -21,7 +22,8 @@ const Filter = () => {
   }
 
   return (
-    <div className='filter-container'>
+   <>
+      <div className='filter-container'>
         <h4> <FcFilledFilter size={30}/> Refine By</h4>
         <div className="range">
             <p>Price :  {priceFilter} </p>
@@ -29,6 +31,7 @@ const Filter = () => {
           </div>
         <div className='filter-section'>
             <h5>Category</h5>
+            <div className="checkbox">
             <label>
                <input 
                    type='checkbox'
@@ -51,7 +54,7 @@ const Filter = () => {
                    value='Jwellery'
                    onChange={handleCategoryFunction}
                />    
-                 Jwellery
+                 Jewellery
             </label>  
             <label>
                <input 
@@ -69,8 +72,10 @@ const Filter = () => {
                />    
                  Footwear
             </label> 
-        </div>    
+            </div>
+        </div>      
     </div>
+   </>
   )
 }
 

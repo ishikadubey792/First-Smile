@@ -110,13 +110,25 @@ Carousel{
 
 .topProducts{
     height: auto;
-    width: 93%;
-    margin: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin: 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 .topProducts h2{
     margin-left: 20px;
     margin-right: 30px;
+    @include sm{
+        margin-top: 40px;
+    }
+}
+.topProducts span{
+    @include sm{
+        margin-top: 40px;
+    }
 }
 .product-container{
     display: flex;
@@ -125,6 +137,7 @@ Carousel{
     justify-content: space-around;
     align-items: center;
     gap: 20px;
+    padding: 20px;
     .product{
         position: relative;
         height: 420px;
@@ -264,12 +277,9 @@ Carousel{
     .topdeals {
         height: auto;
         width: auto;
-        // margin: 20px;
     }
     .electronic {
         flex-direction: row;
-        // align-items: center;
-        // text-align: center;
         justify-content: center;
     }
     .itmes{

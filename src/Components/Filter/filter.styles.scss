@@ -1,11 +1,21 @@
+@import "../../styles/mixin.scss";
 
 .filter-container {
     height: 390px;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 40px 30px;
+    position: fixed;
+    top: 218px;
+    left: 30px;
+    @include md{
+        width: 100vw;
+        margin-top: 50px;
+        height: fit-content;
+        position: static;
+    }
     h4{
         display: flex;
         justify-content: center;
@@ -44,13 +54,29 @@
         }
     }
     .filter-section{
-        margin-top: 10px;
+        margin-top: 40px;
         display: flex;
         flex-direction: column;
-        label input{
-            margin-left: -35px;
-            margin-right: -25px;
-            accent-color: #FF69B4;
+        .checkbox{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            @include md{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+            label{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                text-wrap: nowrap;
+            } input{
+                accent-color: #FF69B4;
+            }
         }
     }
 }

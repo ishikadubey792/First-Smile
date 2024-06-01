@@ -30,7 +30,7 @@ const Product = () => {
     navigate('/view', { state: { product } });
   };
   return (
-    <div className="container">
+    <div className="cont">
       <div className="filter">
         <Filter />
       </div>
