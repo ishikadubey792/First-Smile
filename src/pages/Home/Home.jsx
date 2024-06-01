@@ -38,6 +38,7 @@ const Home = () => {
 
   return (
     <>
+     {/* home page top banner  */}
       <div className="home1">
         <img className="mainbanner" src={banner} alt="banner" />
       </div>
